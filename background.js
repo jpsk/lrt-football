@@ -1,4 +1,4 @@
-const url = 'https://www.lrt.lt/mediateka/tiesiogiai/lrt-televizija'
+const url = 'lrt.lt'
 
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -6,9 +6,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
     chrome.action.onClicked.addListener(async (tab) => {
 
-        console.log('tab', tab);
-
-        if (tab.url.startsWith(url)) {
+        if (tab.url.includes(url)) {
             // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
             const prevState = await chrome.action.getBadgeText({tabId: tab.id});
             // Next state will always be the opposite

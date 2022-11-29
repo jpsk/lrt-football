@@ -10,6 +10,10 @@ header {
     max-width: 100vw;
 }
 
+main {
+    max-width: initial !important;
+}
+
 body {
     padding: 0 !important;
     margin: 0 !important;
