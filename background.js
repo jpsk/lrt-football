@@ -1,6 +1,5 @@
 const url = 'lrt.lt'
 
-
 chrome.runtime.onInstalled.addListener(() => {
 
 
@@ -17,9 +16,6 @@ chrome.runtime.onInstalled.addListener(() => {
                 tabId: tab.id,
                 text: nextState,
             });
-
-            console.log({nextState});
-
 
             if (nextState === "ON") {
                 // Insert the CSS file when the user turns the extension on
